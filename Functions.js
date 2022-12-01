@@ -44,18 +44,19 @@ console.log(`The crazy sum is ${computedCrazySum}`);
 */
 
 /* 
+title("question3");
 function crazyDiff(k) {
      
     if(k<=19){
-        return 19-k;
+        return Math.abs(19-k);
     }
     else{
-        return 3*(k-19);
+        return Math.abs(19-k) *3;
     }
 }
-let computedCrazyDiff=crazyDiff(12);
+let computedCrazyDiff=crazyDiff(-12);
 console.log(`The crazy difference is ${computedCrazyDiff}`);
-*/
+/*
 
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
@@ -100,6 +101,24 @@ function strivify(str1) {
     
 }
 let computedStrive=strivify("ghs");
+console.log(`Strivified string is ${computedStrive}`);
+
+Using a method:
+function strivify(str1) {
+    for(i=0;i<str1.length;i++){
+        if(str1.startsWith("strive") )
+        {
+            return str1;
+        }
+        else{
+        return "strive"+str1;
+        }
+
+        
+    }
+    
+}
+let computedStrive=strivify("strive");
 console.log(`Strivified string is ${computedStrive}`);
 */
 
@@ -153,13 +172,15 @@ console.log(`Reversed string: ${computedReverse}`);
 */
 
 /*
+
 function upperFirst(str){
-    let space=str.split(" ");
-    for(i=0;i<str.length;i++){
-        console.log(space[i][0].toUpperCase());
+    let word=str.split(" ");
+    for(i=0;i<word.length;i++){
+        word[i]=word[i].charAt(0).toUpperCase()+word[i].slice(1);
     }
+    return word.join(" ")
 }
-let computedUpper=upperFirst("hello world");
+let computedUpper=upperFirst("hello beautiful world");
 console.log(`capitalized first letter : ${computedUpper}`);
 
 

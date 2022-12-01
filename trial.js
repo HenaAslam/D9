@@ -8,7 +8,7 @@ function area(l1,l2) {
     return l1 * l2;
 }
 let computedArea=area(4,5);
-console.log(`The area of rectangle is ${computedArea}`);
+console.log(`The area of rectangle is ${area(4,5)}`);
 
 title("question2");
 function crazySum(n1,n2){
@@ -28,13 +28,13 @@ title("question3");
 function crazyDiff(k) {
      
     if(k<=19){
-        return 19-k;
+        return Math.abs(19-k);
     }
     else{
-        return 3*(k-19);
+        return Math.abs(19-k) *3;
     }
 }
-let computedCrazyDiff=crazyDiff(12);
+let computedCrazyDiff=crazyDiff(-12);
 console.log(`The crazy difference is ${computedCrazyDiff}`);
 
 title("question4");
@@ -74,6 +74,7 @@ let computedStrive=strivify("fjkhkjdh");
 console.log(`Strivified string is ${computedStrive}`);
 
 
+
 title("question6");
 function check3and7(r){
     if(r<0){
@@ -108,17 +109,17 @@ let computedReverse=reverseString("hena");
 console.log(`Reversed string: ${computedReverse}`);
 
 
-/*title("question8");
+
+title("question 8");
 function upperFirst(str){
-    let space=str.split(" ");
-    for(i=0;i<str.length;i++){
-        console.log(space[i][0].toUpperCase());
+    let word=str.split(" ");
+    for(i=0;i<word.length;i++){
+        word[i]=word[i].charAt(0).toUpperCase()+word[i].slice(1);
     }
+    return word.join(" ")
 }
-let computedUpper=upperFirst("hello world");
-console.log(`capitalized first letter : ${computedUpper}`);*/
-
-
+let computedUpper=upperFirst("hello beautiful world");
+console.log(`capitalized first letter : ${computedUpper}`);
 
 
 title("question 9")
@@ -135,13 +136,13 @@ function giveMeRandom(n)
     
     for(let i=0;i<n;i++)
     {
-        randomArray.push(Math.floor(Math.random() * 10));
+        randomArray.push(Math.floor(Math.random() * 11));
     }
 
     return randomArray;
 
 }
-let computedArray=giveMeRandom(6);
+let computedArray=giveMeRandom(10);
 console.log(`The random numbers are: ${computedArray}`);
 
 title("question1 extra");
@@ -162,10 +163,10 @@ function checkArray(array1){
     }
     return sum;
 }
-let computedFive=checkArray(giveMeRandom(6));
+let computedFive=checkArray([1,3,6,7,8]);
 console.log(`The result:${computedFive}`);
 
-
+/*
 title("question2 extra");
 let cost=0;
 function shoppingCartTotal(array1){
@@ -185,3 +186,4 @@ function addToShoppingCart(obj){
     return shoppingCart.length
 
 }
+*/
