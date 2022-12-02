@@ -5,13 +5,14 @@
  The function should return the sum of just the numbers bigger than 5.
 */
 
-/* title("question1 extra");
+/* 
 function checkArray(array1){
     let sum=0;
-    for(i=0;i<array1.length;i++){
+    for(let i=0;i<array1.length;i++){
+      
         if(array1[i]>5){
             console.log(array1[i], "is greater than 5");
-            sum+=sum+array1[i];
+            sum=sum+array1[i];
             
 
         }
@@ -22,7 +23,7 @@ function checkArray(array1){
     }
     return sum;
 }
-let computedFive=checkArray(giveMeRandom(6));
+let computedFive=checkArray(computedArray);
 console.log(`The result:${computedFive}`);
  */
 
@@ -32,16 +33,25 @@ console.log(`The result:${computedFive}`);
 */
 
 /* 
-title("question2 extra");
-let cost=0;
-function shoppingCartTotal(array1){
-    for(let i=0;i<array1.length;i++){
+let shoppingCart=[{price:50, name:"phone", id:1 ,quantity:2},
+{price:200, name:"laptop", id:2 ,quantity:4},
+{price:60, name:"airpods", id:3 ,quantity:2}]
+
+cost=0;
+function shoppingCartTotal(array1)
+{
+    
+    for(let i=0;i<array1.length;i++)
+    {
         let item=array1[i];
-        cost+=item.price*item.quantity;
+        cost=cost+(item.price*item.quantity);
 
     }
     return cost;
 }
+
+shoppingCartTotal(shoppingCart);
+console.log(cost);
 
 */
 
@@ -50,13 +60,22 @@ function shoppingCartTotal(array1){
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
 
-/* title("question 3 extra");
-let shoppingCart=[]
+/* 
+let shoppingCart=[{price:50, name:"phone", id:1 ,quantity:2},
+{price:200, name:"laptop", id:2 ,quantity:4},
+{price:60, name:"airpods", id:3 ,quantity:2}];
+
+
+
 function addToShoppingCart(obj){
     shoppingCart.push(obj);
     return shoppingCart.length
 
 }
+
+let number=addToShoppingCart({price:50, name:"phone", id:1 ,quantity:2});
+number=addToShoppingCart({price:50, name:"phone", id:1 ,quantity:2});
+console.log(`The number of items in cart: ${number}`);
 
 */
 
@@ -65,7 +84,28 @@ function addToShoppingCart(obj){
  Create a function called "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in it.
 */
 
-/* WRITE YOUR ANSWER HERE */
+/* 
+let shoppingCart=[{price:50, name:"phone", id:1 ,quantity:2},
+{price:200, name:"laptop", id:2 ,quantity:4},
+{price:6000, name:"airpods", id:3 ,quantity:2}];
+
+
+//expItem=0;
+function maxShoppingCart(array){
+    expItem=0;
+    for(i=0;i<shoppingCart.length;i++){
+        let item=shoppingCart[i];
+        if(item.price>expItem){
+            expItem=item.price;
+        }
+
+    }
+    return expItem;
+}
+
+let exp=maxShoppingCart(shoppingCart);
+console.log(`The most expensive item is ${exp}`);
+ */
 
 /* EXTRA 5
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
