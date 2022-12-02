@@ -112,7 +112,25 @@ console.log(`The most expensive item is ${exp}`);
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
-/* WRITE YOUR ANSWER HERE */
+/* 
+let shoppingCart=[{price:50, name:"phone", id:1 ,quantity:2},
+{price:200, name:"laptop", id:2 ,quantity:4},
+{price:6000, name:"airpods", id:3 ,quantity:2}];
+
+
+function latestShoppingCart(arr){
+    for(i=0;i<arr.length;i++){
+        let item=arr[i];
+        let ind= arr.indexOf(item);
+        if(ind==arr.length-1){
+            return item;
+        }
+    }
+}
+
+let last=latestShoppingCart(shoppingCart);
+console.log(last);
+*/
 
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
